@@ -1,0 +1,265 @@
+% FortySecondsCV LaTeX template
+% Copyright © 2019 René Wirnata <rene.wirnata@pandascience.net>
+% Licensed under the 3-Clause BSD License. See LICENSE file for details.
+%
+% Attributions
+% ------------
+% * fortysecondscv is based on the twentysecondcv class by Carmine Spagnuolo 
+%   (cspagnuolo@unisa.it), released under the MIT license and available under
+%   https://github.com/spagnuolocarmine/TwentySecondsCurriculumVitae-LaTex
+% * further attributions are indicated immediately before corresponding code
+
+
+%-------------------------------------------------------------------------------
+%                             ADDITIONAL PACKAGES
+%-------------------------------------------------------------------------------
+\documentclass[
+  a4paper, 
+%   showframes,
+%   maincolor=cvgreen,
+%   sectioncolor=red,
+%   subsectioncolor=orange
+%   sidebarwidth=0.4\paperwidth,
+%   topbottommargin=0.03\paperheight,
+%   leftrightmargin=20pt
+]{fortysecondscv}
+
+% improve word spacing and hyphenation
+\usepackage{microtype}
+\usepackage{ragged2e}
+\usepackage{fontawesome}
+\usepackage{skak}
+% take care of proper font encoding
+\ifxetex
+	\usepackage{fontspec}
+	\defaultfontfeatures{Ligatures=TeX}
+% \newfontfamily\headingfont[Path = fonts/]{segoeuib.ttf} % local font
+\else
+	\usepackage[utf8]{inputenc}
+	\usepackage[T1]{fontenc}
+% \usepackage[sfdefault]{noto} % use noto google font
+\fi
+
+% enable mathematical syntax for some symbols like \varnothing
+\usepackage{amssymb}
+
+% bubble diagram configuration
+\usepackage{smartdiagram}
+\smartdiagramset{
+  % defaut font size is \large, so adjust to harmonize with sidebar layout
+  bubble center node font = \footnotesize,
+  bubble node font = \footnotesize,
+  % default: 4cm/2.5cm; make minimum diameter relative to sidebar size
+  bubble center node size = 0.4\sidebartextwidth,
+  bubble node size = 0.25\sidebartextwidth,
+  distance center/other bubbles = 1.5em,
+  % set center bubble color
+  bubble center node color = maincolor!70,
+  % define the list of colors usable in the diagram
+  set color list = {maincolor!10, maincolor!40,
+  maincolor!20, maincolor!60, maincolor!35},
+  % sets the opacity at which the bubbles are shown
+  bubble fill opacity = 0.8,
+}
+
+
+%-------------------------------------------------------------------------------
+%                            PERSONAL INFORMATION
+%-------------------------------------------------------------------------------
+% profile picture
+%\cvprofilepic{pics/profile.png}
+% your name
+\cvname{Aaqib Bashir Dar}
+% job title/career
+%\cvjobtitle{Panda Scientist,\\[0.2em] Panda of the Year}
+% date of birth
+\cvbirthday{April 5, 1996}
+% short address/location, use \newline if more than 1 line is required
+\cvaddress{Sector-B, Abu-Bakr Colony, Naikbagh, Srinagar, J\&K (IN)}
+% phone number
+\cvphone{+91 0000000000}
+% personal website
+\cvsite{https://researchgate.net/Aaqib\_Dar}
+% email address
+\cvmail{aaqibb13@gmail.com}
+% pgp key
+%\cvkey{4096R/FF00FF00}{0xAABBCCDDFF00FF00}
+%\cvgit{https://github.com/aaqibb13}
+% add additional information
+% \newcommand{\additional}{some more?}
+
+
+%-------------------------------------------------------------------------------
+%                              SIDEBAR 1st PAGE
+%-------------------------------------------------------------------------------
+% overwrite default icons and order of personal information
+% \renewcommand{\personaltable}{%
+% 	\begin{personal}[0.8em]
+% 		\circleicon{\faKey}      & \cvkey  \\
+% 		\circleicon{\faAt}       & \cvmail \\
+% 		\circleicon{\faGlobe}    & \cvsite \\
+% 		\circleicon{\faPhone}    & \cvphone \\
+% 		\circleicon{\faEnvelope} & \cvaddress \\
+% 		\circleicon{\faInfo}     & \cvbirthday \\
+% 		% add another line
+% 		\circleicon{\faQuestion} & \additional
+% 	\end{personal}
+% }
+
+% add more profile sections to sidebar on first page
+\addtofrontsidebar{
+	% include gosquare national flags from https://github.com/gosquared/flags;
+	% naming according to ISO 3166-1 alpha-2 country codes
+	\graphicspath{{pics/flags/}}
+
+	\profilesection{Languages}
+	\centering
+\skill{ KASHMIRI \flag{KMR.png}}{\\Native or bilingual}
+		\skill{ENGLISH \flag{GB.png}}{\\Full Working Proficiency}
+		\skill{URDU \flag{PK.png}}{  \\Limited Working Proficiency}
+		\skill{HINDI \flag{IN.png}}{ \\Limited Working Proficiency}
+\profilesection{Memberships}
+\begin{memberships}
+		\membership{pics/ieee.png}{Institute of Electrical and Electronics Engineers}
+		\membership{pics/sdiwclogo.png}{The Society of Digital Information \& Wireless Communication}
+	\end{memberships}
+	
+\begin{figure}\centering
+		\smartdiagram[bubble diagram]{
+			\textcolor{white}{\textbf{Being a}} \\
+			\textcolor{white}{\textbf{Researcher}}, % center bubble
+			\textcolor{black!90}{1.Reading},
+			\textcolor{black!90}{2.Brainstorm},
+			\textcolor{black!90}{3.Develop Ideas},
+			\textcolor{black!90}{4.Strategize},
+			\textcolor{black!90}{5.Write}
+		}
+	\end{figure}	
+	
+	\profilesection{Hard Skills}
+		\skill{\faBarChart}{Research, Data Presentation, Project Management}
+		\skill{\faCode}{\LaTeX, Python, C, Arduino}
+		\skill{\faPencil}{Academic Writing}
+
+	\profilesection{Soft Skills}
+		\pointskill{\faHome}{Communication}{5}
+ 
+		\pointskill{\faTasks}{Decision Making}{5}
+ 			
+		\pointskill{\faChild}{Leadership}{4}
+ 			
+		\pointskill{\faGears}{Teamwork}{4}
+ 	}
+
+
+%-------------------------------------------------------------------------------
+%                              SIDEBAR 2nd PAGE
+%-------------------------------------------------------------------------------
+\addtobacksidebar{
+	\profilesection{About Me}
+	\aboutme{
+		Aaqib Bashir Dar is a computer science major currently working as an Independent Researcher in the field of Cryptography, more specifically Blockchain Smart Contract based Access Control Mechanisms. Aaqib is looking forward to work at the intersection of Secure Multi-party computation and Game Theory, Isogeny based cryptography and Security Reduction of Cryptographic Protocols and Privacy \& security in Internet of Things.
+	}
+
+	
+
+\chartlabel{My Activity Chart}
+
+	\wheelchart{3.7em}{2em}{%
+	20/3em/maincolor!50/Research,
+	15/3em/maincolor!15/Scribble,
+	30/4em/maincolor!40/Write,
+	20/3em/maincolor!20/Repeat
+	}
+
+	\profilesection{Other skills}
+	\barskill{\faBullseye}{Learnability Quotient}{80}
+	\barskill{\symking}{Playing Chess}{40}
+	\barskill{\faChild}{Interpersonal Conflict Resolution}{60}
+}
+	
+
+
+
+%-------------------------------------------------------------------------------
+%                         TABLE ENTRIES RIGHT COLUMN
+%-------------------------------------------------------------------------------
+\begin{document}
+
+\makefrontsidebar
+
+\cvsection{Education}
+
+\subsection{Undergraduate}
+\begin{cvtable}
+	\cvitem{2015 -- 2019}{Bachelor of Engineering \faGraduationCap}{ University of Kashmir}
+		{\textbf{Focus:} Computer Science Engineering which involved an in-depth analysis of core subjects like Operating Systems, Data Structures, Computer Networks, Object Oriented Programming, Design and Analysis of Algorithms, Computer Architecture and Organisation, Discrete Mathematics and  Database Management Systems.\\ \textbf{Percentage:} 70.2\%}
+	\cvitem{}{Bachelor Thesis/Major Project }{Team Lead}
+		{\textbf{Congestion Control inside Public Vehicles using IR Sensors} \\ The Project was realized using an Arduino UNO R3 microcontroller and other key components like IR sensors, a LCD display, a breadboard, jumper wires etc. A small prototype was build where the concept was realized for a parking lot which happens to be another application of the concept.}
+	\cvitem{2011 -- 2013}{Intermediate School \faGraduationCap}{ Sri-Pratap Higher Secondary School}
+		{\textbf{Focus:} During my intermediate school, my main subjects were English, Physics, Mathematics and Chemistry along with Statistics as my additional subject.\\ \textbf{Percentage:} 68\%}
+	
+\end{cvtable}
+
+\cvsection{Publications}
+\begin{cvtable}
+	\cvitem{September 2020}{Applicability of Mobile Contact Tracing in Fighting Pandemic (COVID-19): Issues, Challenges and Solutions.}{Computer Science Review (Elsevier)}{In this paper, we throw light on some of the issues and challenges pertaining to the adaption of mobile contact tracing for fighting COVID-19. In essence we proposed an Evaluation framework for mobile contact tracing solutions to determine their feasibility and effectiveness. We evaluate some of the available contact tracing solutions in light of our proposed framework. Furthermore we presented possible attacks that could be launched against contact tracing solutions with necessary countermeasures to thwart any possibility of such attacks.}
+	\\
+	\cvitem{April 2020}{Group Testing: Leveraging a Mathematical Tool for Effective COVID-19 Testing}{\faLink https://www.researchgate.net/publication/340580929.\\ ResearchGate Preprint}{In this paper, we proposed a theoretical model inspired by Merkle and Binary trees for accelerated COVID-19 testing. We have formulated and simplified the idea of how the testing can be improved drastically while tracing the infected individual with supposedly very less complexity. Our approach reduces the complexity in terms of the number of tests that are to be carried out.}
+	\\
+		\cvitem{July 2020}{Blockchain Driven Access Control Mechanisms, Models and Frameworks}{Working Paper}{In this paper, we give a start-of-the-art review of Blockchain driven access control mechanisms, emphasize on specific applications they are targeting, the platforms that are being adapted, tools being used and implementation testbeds. We also give insights into possible attacks, future directions and open problems in this area.}
+\end{cvtable}
+
+
+\cvsection{Awards, Certifications \& Participations}
+\begin{cvtable}
+
+\cvitem{JULY 2020}{Statement of Participation \faCertificate}{The Open University}{This statement of participation was awarded for completing the 10-hour course on the \textbf{Information Security} and its management which are important for any modern organisation and to every individual.}
+\\
+\cvitem{JULY 2020}{Certificate of Brilliance \faCertificate}{Eduonix Learning Solutions Pvt Ltd}{This statement of participation was awarded for completing the course \textbf{Learn Software Testing Certification Course} on July $15^{th}$.\\
+Verify at: \faLink https://www.eduonix.com/certificate/75e28d5075}
+\\
+\cvitem{JULY 2020}{Acknowledgement of Participation \faCertificate}{ UPM BERILMU BERBAKTI}{This acknowledgement of Participation Certificate was presented for participating in a webinar session titled \textbf{"BLOCKCHAIN WEBINAR (SERIES I) Building Resilience with Blockchain for a Sustainable Malaysia’s Agriculture"} which was jointly organized by \textbf{"Faculty of Computer Science and Information Technology, UNIVERSITI PUTRA MALAYSIA", "Malaysian Industry-Government Group for High Technology", "Infinity Blockchain Ventures" and "MIMOS"}}
+\\
+
+\cvitem{JUNE-JULY 2020}{Student Participation}{University of Auckland(Online Event)}{I participated in \textbf{Fourteenth Algorithmic Number Theory Symposium(ANTS)} which was intended to be held at the University of Auckland, New Zealand from \textbf{June $29^{th}$ -  July $4^{th}$} but due to the ongoing situation, the conference was turned into an online conference. The ANTS meetings,are being held biannually since 1994, and are the premier international forum for the presentation of new research in computational number theory and its applications. They are devoted to various algorithmic aspects of number theory, including elementary number theory, algebraic number theory, analytic number theory, geometry of numbers, algebraic geometry, finite fields, and cryptography.}
+\\
+\cvitem{JULY 2020}{Certificate of Completion \faCertificate}{LinkedIN LEARNING}{This Certificate was awarded for completing the course on \textbf{Introduction to Quantum Cryptography}, authorized by \textbf{LinkedIN Learning} and offered through it.\\ Certificate ID: AWT8YAegeg9emF5O9ktv340VRmLN}
+\\
+\cvitem{MAY 2020}{Certificate of Completion \faCertificate}{Coursera}{This Certificate was awarded for completing the course on \textbf{COVID-19 Contact Tracing} which is an online non-credit course authorized by \textbf{John Hopkins University} and offered through \textbf{Coursera}\\ Verify at \faLink  coursera.org/verify/7RG5Y3JEQXLS}
+\\
+	\cvitem{APRIL 2020}{Reviewer Certificate \faCertificate}{Journal of Computer Science}{This Certificate was awarded for participating in the peer-review process of manuscript 6251-JCS entitled: "Improvement of Menezes-Vanstone Elliptic Curve Cryptosystem Based on Quadratic Bezeir Curve Technique"}
+	\\
+	\cvitem{JUNE 2019}{Certificate of Participation \faCertificate}{Dept of CSE(IUST) \& MACAUT WB}{This Certificate was awarded for participating in a week long workshop on \textbf{Data Science and Information Security bootcamp}, organized by the Department of Computer Science \& Engineering and Electronics \& Communication Engineering, Islamic University of Science \& Technology (IUST), Jammu \& kashmir, in collaboration with MAKAUT, West Bengal.}
+	\\
+	\cvitem{AUGUST 2018}{Certificate of Participation \faCertificate}{CETPA INFOTECH PVT. LTD}{This Certificate was awarded for participating in a two-day Worshop on IoT at SSM COLLEGE OF ENGINEERING AND TECHNOLOGY.}
+\end{cvtable}
+
+
+
+
+
+
+\newpage
+
+\makebacksidebar
+
+\cvsection{Internships}
+
+\begin{cvtable}
+	\cvitem{Feb 2018}{CNS INFOTEL PVT. LTD}{Internet Service Provider}{Intern - The Internship period lasted for a month where every week was dedicated for a particular section of subject matter. The first week involved a survey at the client level which include understanding various issues that clients experience at their end. The second and third week were devoted to installation of SXT devices and troubleshooting the already underlying issues. The last week was specifically devoted in understanding various issues at the backend and how to mitigate issues and manage the backend effectively.}
+\end{cvtable}
+
+\begin{cvtable}
+	\cvitem{Feb 2018}{Brillwork}{Health, Wellness \& Fitness}{Researcher - My job responsibility was to prepare and write compelling and investor specific content for a pitch. The Pitch was targeted for a startup called Brillwork. Brillwork is a mobile application based solution to tackle various workplace conflicts and imbibe in individuals a notion of workplace learnability by understanding their needs and problems better. Brillwork is now available on Playstore in it's earliest versions.}
+\end{cvtable}
+
+\cvsection{Extra-Curricular Activities}
+\begin{cvtable}
+	\cvitemshort{\faMedium}{I blog on medium in my leisure time}
+	\cvitemshort{\faBook}{I love Science fiction, Biographies \& Thriller genre of books.}
+	\cvitemshort{\faCoffee}{I turn Coffee into ideas and love to scribble in an interdisciplinary manner.}
+\end{cvtable}
+
+\cvsignature
+\end{document} 
