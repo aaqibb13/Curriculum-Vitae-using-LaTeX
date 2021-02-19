@@ -18,8 +18,8 @@ Since LaTeX offers WYSIWYG(What you see is what you get), it shouldn't be hard t
 <div align='center'>
   <h3> Curriculum-Vitae Front </h3>
  </div>
- 
-![](cvfront.png)
+
+  ![](cvfront.png)
 
 <div align='center'>
   <h3> Curriculum-Vitae Back </h3>
