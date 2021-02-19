@@ -12,7 +12,7 @@ Since LaTeX offers WYSIWYG(What you see is what you get), it shouldn't be hard t
 
 
 <div align="center">
-  <h2> Curriculum-Vitae Demonstration </h2>
+  <h2> Curriculum-Vitae See Through</h2>
 </div>
 
 <div align='center'>
