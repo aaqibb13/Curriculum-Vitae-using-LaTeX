@@ -8,7 +8,7 @@ This repository contains the code for Curriculum Vitae and the related files nee
   <h1> Working through the Code </h1>
 </div>
 
-Since LaTeX offers WYSIWYG(What you see is what you get), it shouldn't be hard to fork this repository or download the code and follow the same directory structure as is in this github repository to avoid any unnecessary mismatch path errors. The Code can be worked on either in offline mode or in the online editor Overleaf.
+Since LaTeX offers WYSIWYG (What you see is what you get), it shouldn't be hard to fork this repository or download the code and follow the same directory structure as is in this github repository to avoid any unnecessary mismatch path errors. The Code can be worked on either in offline mode or in the online editor Overleaf.
 
 
 <div align="center">
