@@ -1,8 +1,8 @@
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/aaqibb13/Curriculum-Vitae-using-LaTeX) ![Lines of code](https://img.shields.io/tokei/lines/github/aaqibb13/Curriculum-Vitae-using-LaTeX) ![GitHub last commit](https://img.shields.io/github/last-commit/aaqibb13/Curriculum-Vitae-using-LaTeX)
-
 <div align="center">
   <h1> Curriculum-Vitae-using-LaTeX </h1>
 </div>
+
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/aaqibb13/Curriculum-Vitae-using-LaTeX) ![Lines of code](https://img.shields.io/tokei/lines/github/aaqibb13/Curriculum-Vitae-using-LaTeX) ![GitHub last commit](https://img.shields.io/github/last-commit/aaqibb13/Curriculum-Vitae-using-LaTeX)
 
 This repository contains the code for Curriculum Vitae and the related files needed to build and run this code.
 
